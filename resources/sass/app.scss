@@ -1,0 +1,162 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+/* --- ここから追加 ---*/
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+}
+
+body {
+    font-size: 16px;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Hiragino Kaku Gothic ProN,"メイリオ",meiryo,sans-serif;
+    font-weight: 400;
+}
+
+.navbar-laravel {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+// ナビゲーションバーの背景色をQiitaの色にする
+nav {
+    background-color: #55C501;
+    #Navber {
+        .navbar-nav {
+            .nav-item {
+                // 投稿するボタンの背景を深緑にする
+                #post-link {
+                    background-color: #367E00;
+                    border-radius: 5px;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
+
+                // ここから追記
+                #register {
+                    border: solid 2px white;
+                    border-radius: 10px;
+                }
+                // ここまで追記
+
+            }
+        }
+    }
+}
+
+#login-wrapper {
+    background-color: #55C501;
+    .col-7 {
+        padding-left: 80px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        h1 {
+            font-size: 50px;
+        }
+    }
+    .col-5 {
+        form {
+            margin-top: 50px;
+            margin-right: 30px;
+            table {
+                border-collapse: separate;
+                border-spacing: 0px 15px;
+                tr {
+                    th {
+                        font-size: 10px;
+                        color: white;
+                        width: 80px;
+                    }
+                    td {
+                        .form-control {
+                            height: 45px;
+                        }
+                        input[type="submit"] {
+                            width: 110px;
+                            color: white;
+                            background-color: #55C501;
+                            border: solid 2px white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.post-page-wrapper {
+    #title-input {
+        height: 3rem;
+        &::placeholder {
+            font-size: 1.3rem;
+        }
+    }
+    .row {
+        justify-content: center;
+        .col-6 {
+            padding: 0rem;
+            flex: none;
+            width: 48%;
+
+            #markdown_editor_textarea {
+                padding: 1rem;
+                height: 29rem;
+                width: 100%;
+            }
+            #markdown_preview {
+                padding: 1rem;
+                height: 29rem;
+                border: solid 1px gray;
+                width: 100%;
+                background-color: white;
+                border: solid 1px #ced4da;
+                border-radius: 0.25rem;
+                color: #495057;
+                h1 {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    margin-bottom: 1rem;
+                    padding-bottom: 0.2rem;
+                    border-bottom: solid 1px #ddd;
+                }
+                h2 {
+                    font-size: 1.8rem;
+                    margin-bottom: 1rem;
+                    padding-bottom: 0.2rem;
+                    border-bottom: solid 1px #ddd;
+                }
+                h3 {
+                    font-size: 1.8rem;
+                    margin-bottom: 1rem;
+                    padding-bottom: 0.2rem;
+                    border-bottom: solid 1px #ddd;
+                }
+                pre {
+                    code {
+                        color: #fff;
+                        padding: 1.5rem 1rem;
+                        background-color: #364549;
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .post-page-footer {
+        display: flex;
+        justify-content: flex-end;
+        .post-button {
+            background-color: #55c501;
+            color: #fff;
+            border-radius: 0.25rem;
+            width: 7rem;
+            height: 2rem;
+            margin-right: 1rem !important;
+        }
+    }
+}
