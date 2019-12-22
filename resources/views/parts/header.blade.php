@@ -56,7 +56,7 @@
                     <a href="/register" class="nav-link text-white" id="register">ユーザー登録</a>
                 </li>
                 <li class="nav-item ml-2">
-                    <a href="#" class="nav-link text-white">ログイン</a>
+                    <a href="/login" class="nav-link text-white">ログイン</a>
                 </li>
             @endif
         </ul>
