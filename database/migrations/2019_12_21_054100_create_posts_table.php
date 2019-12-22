@@ -16,7 +16,8 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->integer('title');
+            $table->integer('user_id');
+            $table->string('title');
             $table->string('tag1');
             $table->string('tag2')->nullable();
             $table->string('tag3')->nullable();

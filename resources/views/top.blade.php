@@ -13,7 +13,8 @@
                     <table>
                         <tr>
                             <th>ユーザー名</th>
-                            <td><input type="text" name="username" id="" class="form-control" placeholder="好きな名前を入れてください"
+                            <td><input type="text" name="username" id="" class="form-control"
+                                       placeholder="好きな名前を入れてください"
                                        size="50" value="{{ old('email') }}" name="username" required autofocus></td>
                         </tr>
                         <tr>
@@ -36,5 +37,20 @@
             </div>
         </div>
     @else
+        <div class="top-wrapper">
+            <div class="article-wrapper col-md-6">
+                @foreach($articles as $article)
+                    <div class="article-box">
+                        <div class="article-box-left"></div>
+                        <div class="article-right">
+                            <a href="" class="article-title">{{ $article->title }}</a>
+                            <div class="article-details">
+                                <div class="article-date">{{ $article->created_at }}</div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
     @endif
 @endsection
