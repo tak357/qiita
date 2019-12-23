@@ -17,6 +17,6 @@ https://github.com/kanazaca/counter-cache
 - ページネーション
 - イイネ機能（予定）
 
-##参考ページ
+## 参考ページ
 https://qiita.com/daijiro_maeyama/items/e2aa608a0b49cff10969
 https://qiita.com/dai_designing/items/67a48e31d50899c6543f
