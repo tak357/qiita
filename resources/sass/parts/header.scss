@@ -5,7 +5,6 @@ nav {
     #Navber {
         .navbar-nav {
             .nav-item {
-                // 投稿するボタンの背景を深緑にする
                 #post-link {
                     background-color: #367E00;
                     border-radius: 5px;
@@ -13,14 +12,10 @@ nav {
                     padding-right: 1rem;
                 }
 
-                // ここから追記
                 #register {
                     border: solid 2px white;
                     border-radius: 10px;
                 }
-
-                // ここまで追記
-
             }
         }
     }

@@ -53,5 +53,25 @@ class PostController extends Controller
         $article = Post::where('id', $id)->first();
         return view('auth.item', compact('article'));
     }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+
+        #クエリ生成
+        $query = Post::query();
+
+        #もしキーワードがあったら
+        if (!empty($keyword)) {
+            $query->where('title', 'like', '%' . $keyword . '%');
+        }
+
+        $user = Auth::user();
+
+        #ページネーション
+        $items = $query->orderBy('created_at', 'desc')->paginate(10);
+
+        return view('search', ['items' => $items, 'keyword' => $keyword, 'user' => $user]);
+    }
 }
 

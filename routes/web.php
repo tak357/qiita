@@ -20,4 +20,7 @@ Route::post('/drafts/new', 'Auth\PostController@postArticle')->name('drafts.new.
 
 Route::get('/drafts/{id}', 'Auth\PostController@showArticle')->name('item');
 
+Route::get('/search', 'Auth\PostController@search')->name('search');
+Route::post('/search', 'Auth\PostController@searchResult');
+
 //Route::get('/home', 'HomeController@index')->name('home');

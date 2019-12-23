@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15b6581b-5b68-443e-aa9a-5691f8751734" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/parts/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/parts/header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/parts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/parts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/top.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +49,20 @@
         <item name="@127.0.0.1" type="feb32156:DbDataSourceImpl" />
         <item name="schema" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="default: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="schema" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="default: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="posts: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="schema" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="default: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="users: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -154,7 +174,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/auth/drafts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/sass" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
   </component>
@@ -196,7 +216,7 @@
       <updated>1576880662425</updated>
       <workItem from="1576880667654" duration="26773000" />
       <workItem from="1576987568867" duration="199000" />
-      <workItem from="1576997331710" duration="4549000" />
+      <workItem from="1576997331710" duration="15602000" />
     </task>
     <servers />
   </component>
@@ -215,21 +235,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/top.blade.php</url>
-          <line>7</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/parts/header.blade.php</url>
-          <line>27</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
