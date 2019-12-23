@@ -175,6 +175,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         *  イイネ機能の為に追加
+         */
+        kanazaca\CounterCache\CounterCacheServiceProvider::class,
     ],
 
     /*

@@ -7,8 +7,22 @@ use Illuminate\Http\Request;
 use App\Post;
 use Illuminate\Support\Facades\Auth;
 
-class PostController extends Controller
+class PostsController extends Controller
 {
+    public function __construct()
+    {
+//        $this->middleware('auth', array('except' => 'index'));
+    }
+
+    public function show($id)
+    {
+        $post = Post::findOrFail($id);
+
+        $like = $post->likes()->where('user_id', Auth::user()->id)->first();
+
+        return view('posts.show')->with(array('post' => $post, 'like' => $like));
+    }
+
     public function index()
     {
         return view('auth.drafts.new');
