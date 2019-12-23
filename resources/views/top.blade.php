@@ -52,6 +52,9 @@
                         </div>
                     </div>
                 @endforeach
+                <div class="paginate">
+                    {{ $articles->links() }}
+                </div>
             </div>
         </div>
     </div>

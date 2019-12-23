@@ -16,7 +16,8 @@ class PostController extends Controller
 
     public function showTopPage()
     {
-        $articles = Post::orderBy('created_at', 'asc')->get();
+//        $articles = Post::orderBy('created_at', 'asc')->get();
+        $articles = Post::orderBy('created_at', 'asc')->paginate(10);
         return view('top', compact('articles'));
     }
 
