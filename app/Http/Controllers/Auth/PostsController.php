@@ -14,15 +14,6 @@ class PostsController extends Controller
 //        $this->middleware('auth', array('except' => 'index'));
     }
 
-    public function show($id)
-    {
-        $post = Post::findOrFail($id);
-
-        $like = $post->likes()->where('user_id', Auth::user()->id)->first();
-
-        return view('posts.show')->with(array('post' => $post, 'like' => $like));
-    }
-
     public function index()
     {
         return view('auth.drafts.new');
@@ -44,7 +35,6 @@ class PostsController extends Controller
             'article' => 'required|string',
         ]);
 
-
 //        TODO:半角スペースだけでなく、全角スペースも考慮する
         $tags = explode(' ', $request->tags);
         $tag1 = $tags[0];
@@ -63,10 +53,30 @@ class PostsController extends Controller
         return redirect("/drafts/{$article->id}");
     }
 
+//    public function showArticle($id)
+//    {
+//        $article = Post::where('id', $id)->first();
+//        return view('auth.item', compact('article'));
+//    }
+
+//    public function show($id)
+//    {
+//        $post = Post::findOrFail($id);
+//
+//        $like = $post->likes()->where('user_id', Auth::user()->id)->first();
+//
+//        return view('posts.show')->with(array('post' => $post, 'like' => $like));
+//    }
+
     public function showArticle($id)
     {
         $article = Post::where('id', $id)->first();
-        return view('auth.item', compact('article'));
+
+        $post = Post::findOrFail($id);
+
+        $like = $post->likes()->where('user_id', Auth::user()->id)->first();
+
+        return view('auth.item', compact('article'))->with(array('post' => $post, 'like' => $like));
     }
 
     public function search(Request $request)

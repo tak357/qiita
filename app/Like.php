@@ -11,8 +11,7 @@ class Like extends Model
 
     // you can have more than one counter
     public $counterCacheOptions = [
-//        'Product' => ['field' => 'likes_count', 'foreignKey' => 'product_id']
-        'Product' => [
+        'Post' => [
             'field' => 'likes_count',
             'foreignKey' => 'post_id',
         ]

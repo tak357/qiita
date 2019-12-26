@@ -11527,7 +11527,7 @@ body {
   border-radius: 0.25rem;
   width: 7rem;
   height: 2rem;
-  margin-right: 1rem !important;
+  margin-right: 1rem;
 }
 
 .validation {

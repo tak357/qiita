@@ -2,28 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15b6581b-5b68-443e-aa9a-5691f8751734" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LikesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Like.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_23_094353_create_likes_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_23_112619_add_columns_to_posts_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icon_heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icon_heart_red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/bootstrap-4.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/default.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/semantic-ui.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-bootstrap-4.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-default.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/qiita.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/qiita.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/PostsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/PostsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LikesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LikesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Like.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Like.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/top.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/item.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/item.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,6 +162,7 @@
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
       <path value="$PROJECT_DIR$/vendor/kanazaca/counter-cache" />
+      <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
     </include_path>
   </component>
   <component name="ProjectId" id="1VGXymYS3Rr5xvBvyy2DnwW3tbI" />
@@ -184,11 +180,12 @@
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/resources/views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/auth/drafts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -241,7 +238,9 @@
       <updated>1576880662425</updated>
       <workItem from="1576880667654" duration="26773000" />
       <workItem from="1576987568867" duration="199000" />
-      <workItem from="1576997331710" duration="31237000" />
+      <workItem from="1576997331710" duration="35628000" />
+      <workItem from="1577273003107" duration="5000" />
+      <workItem from="1577378540275" duration="5374000" />
     </task>
     <servers />
   </component>
