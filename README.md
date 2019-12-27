@@ -14,9 +14,10 @@ https://github.com/kanazaca/counter-cache
 
 ## 主な機能
 - ログイン機能
+- 記事投稿機能
 - 検索機能
 - ページネーション
-- イイネ機能（予定）
+- イイネ機能
 
 ## 参考ページ
 https://qiita.com/daijiro_maeyama/items/e2aa608a0b49cff10969
