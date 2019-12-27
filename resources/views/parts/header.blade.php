@@ -15,20 +15,20 @@
         <ul class="navbar-nav ml-auto mr-5">
             @if (Auth::check())
                 {{--TODO:ログインユーザー名を表示する--}}
-                {{--<li class="nav-item ml-2"><div class="nav-link text-white">{{ $user->name }} でログイン中</div></li>--}}
+                {{--<li class="nav-item ml-2"><div class="nav-link text-white">{{ $users->name }} でログイン中</div></li>--}}
                 <li class="nav-item ml-2"><a href="/drafts/new" id="post-link" class="nav-link text-white">投稿する</a></li>
                 <li class="nav-item dropdown">
                     <a href="" class="nav-link dropdown-toggle text-white" id="navbarDropdown"
                        role="button" data-toggle="dropdown" aria-haspopup="true"
                        aria-expanded="false">アイコン</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a href="#" class="dropdown-item">マイページ</a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">下書き一覧</a>
-                        <a href="#" class="dropdown-item">編集リクエスト一覧</a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">設定</a>
-                        <a href="#" class="dropdown-item">ヘルプ</a>
+                        <a href="/user" class="dropdown-item">マイページ</a>
+{{--                        <div class="dropdown-divider"></div>--}}
+{{--                        <a href="#" class="dropdown-item">下書き一覧</a>--}}
+{{--                        <a href="#" class="dropdown-item">編集リクエスト一覧</a>--}}
+{{--                        <div class="dropdown-divider"></div>--}}
+{{--                        <a href="#" class="dropdown-item">設定</a>--}}
+{{--                        <a href="#" class="dropdown-item">ヘルプ</a>--}}
                         <div class="dropdown-divider"></div>
 
                         <a href="{{ route('logout') }}" class="dropdown-item"

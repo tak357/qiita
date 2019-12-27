@@ -26,4 +26,7 @@ Route::post('/search', 'Auth\PostsController@searchResult');
 Route::post('/posts/{post}/likes', 'LikesController@store');
 Route::post('/posts/{post}/likes/{like}', 'LikesController@destroy');
 
+// ユーザー情報 2019/12/27
+Route::get('/user', 'Auth\UsersController@index');
+
 //Route::get('/home', 'HomeController@index')->name('home');

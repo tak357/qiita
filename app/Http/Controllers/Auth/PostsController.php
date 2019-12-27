@@ -53,21 +53,6 @@ class PostsController extends Controller
         return redirect("/drafts/{$article->id}");
     }
 
-//    public function showArticle($id)
-//    {
-//        $article = Post::where('id', $id)->first();
-//        return view('auth.item', compact('article'));
-//    }
-
-//    public function show($id)
-//    {
-//        $post = Post::findOrFail($id);
-//
-//        $like = $post->likes()->where('user_id', Auth::user()->id)->first();
-//
-//        return view('posts.show')->with(array('post' => $post, 'like' => $like));
-//    }
-
     public function showArticle($id)
     {
         $article = Post::where('id', $id)->first();
@@ -96,7 +81,7 @@ class PostsController extends Controller
         #ページネーション
         $items = $query->orderBy('created_at', 'desc')->paginate(10);
 
-        return view('search', ['items' => $items, 'keyword' => $keyword, 'user' => $user]);
+        return view('search', ['items' => $items, 'keyword' => $keyword, 'users' => $user]);
     }
 }
 
