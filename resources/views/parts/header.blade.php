@@ -22,13 +22,16 @@
                        role="button" data-toggle="dropdown" aria-haspopup="true"
                        aria-expanded="false">アイコン</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a href="/user" class="dropdown-item">マイページ</a>
+                        <a href="/user" class="dropdown-item">登録情報</a>
 {{--                        <div class="dropdown-divider"></div>--}}
 {{--                        <a href="#" class="dropdown-item">下書き一覧</a>--}}
 {{--                        <a href="#" class="dropdown-item">編集リクエスト一覧</a>--}}
 {{--                        <div class="dropdown-divider"></div>--}}
 {{--                        <a href="#" class="dropdown-item">設定</a>--}}
 {{--                        <a href="#" class="dropdown-item">ヘルプ</a>--}}
+{{--                        TODO:ユーザー情報削除--}}
+                        <a href="#" class="dropdown-item">サービスを退会する</a>
+
                         <div class="dropdown-divider"></div>
 
                         <a href="{{ route('logout') }}" class="dropdown-item"

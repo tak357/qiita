@@ -28,5 +28,11 @@ Route::post('/posts/{post}/likes/{like}', 'LikesController@destroy');
 
 // ユーザー情報 2019/12/27
 Route::get('/user', 'Auth\UsersController@index');
+Route::get('/user/edit-name', 'Auth\UsersController@editName');
+Route::post('/user/edit-name', 'Auth\UsersController@updateName');
+Route::get('/user/edit-mail', 'Auth\UsersController@editMail');
+Route::post('/user/edit-mail', 'Auth\UsersController@updateMail');
+Route::get('/user/edit-password', 'Auth\UsersController@editPassword');
+Route::post('/user/edit-password', 'Auth\UsersController@updatePassword');
 
 //Route::get('/home', 'HomeController@index')->name('home');
