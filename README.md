@@ -16,6 +16,7 @@ https://github.com/kanazaca/counter-cache
 - ログイン機能
 - 記事投稿機能
 - 記事編集機能
+- 記事削除機能
 - 検索機能
 - ページネーション
 - イイネ機能
@@ -36,6 +37,6 @@ https://github.com/kanazaca/counter-cache
 
 - https://dotinstall.com/lessons/basic_laravel_v2/42221
 
-### 記事削除処理
+### 記事削除機能
 
 - https://dotinstall.com/lessons/basic_laravel_v2/42224
