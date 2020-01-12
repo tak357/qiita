@@ -15,6 +15,7 @@ https://github.com/kanazaca/counter-cache
 ## 主な機能
 - ログイン機能
 - 記事投稿機能
+- 記事編集機能
 - 検索機能
 - ページネーション
 - イイネ機能
@@ -30,3 +31,7 @@ https://github.com/kanazaca/counter-cache
 ### 画像アップロード機能
 
 - https://php-junkie.net/framework/laravel/upload_image/
+
+### 記事編集機能
+
+- https://dotinstall.com/lessons/basic_laravel_v2/42221
