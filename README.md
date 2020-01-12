@@ -35,3 +35,7 @@ https://github.com/kanazaca/counter-cache
 ### 記事編集機能
 
 - https://dotinstall.com/lessons/basic_laravel_v2/42221
+
+### 記事削除処理
+
+- https://dotinstall.com/lessons/basic_laravel_v2/42224
