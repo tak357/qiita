@@ -18,6 +18,7 @@ https://github.com/kanazaca/counter-cache
 - 検索機能
 - ページネーション
 - イイネ機能
+- 画像アップロード機能
 
 ## 参考ページ
 ### イイネ機能
@@ -25,3 +26,7 @@ https://github.com/kanazaca/counter-cache
 - https://qiita.com/daijiro_maeyama/items/e2aa608a0b49cff10969
 - https://qiita.com/dai_designing/items/67a48e31d50899c6543f
 - https://qiita.com/kgkgon/items/4ea0675afde639e6d540
+
+### 画像アップロード機能
+
+- https://php-junkie.net/framework/laravel/upload_image/
