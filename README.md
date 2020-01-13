@@ -6,11 +6,18 @@ https://qiita-fake.herokuapp.com
 
 ※適当な名前とアドレス、パスワードを登録して利用
 
-## 使用している主な技術
-- Laravel
-- JQuery
-- kanazaca/counter-cache
-https://github.com/kanazaca/counter-cache
+## 開発環境
+- Docker for Mac
+    - Laradock
+
+## 本番環境
+- heroku
+
+## 使用している主な技術、ツール
+- PHP 7.3.9 / Laravel 6.9
+- MySQL
+- kanazaca/counter-cache https://github.com/kanazaca/counter-cache
+- PhpStorm
 
 ## 主な機能
 - ログイン機能
