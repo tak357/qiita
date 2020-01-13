@@ -28,6 +28,8 @@ https://qiita-fake.herokuapp.com
 - ページネーション
 - イイネ機能
 - 画像アップロード機能
+- ソーシャルログイン（予定）
+https://www.webprofessional.jp/easily-add-social-logins-to-your-app-with-socialite/
 
 ## 参考ページ
 ### イイネ機能
