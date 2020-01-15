@@ -13,3 +13,8 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
+
+// 2020/01/05追加
+if (mix.inProduction()) {
+    mix.version();
+}

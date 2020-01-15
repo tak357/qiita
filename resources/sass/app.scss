@@ -17,6 +17,7 @@ body {
     font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Hiragino Kaku Gothic ProN, "メイリオ", meiryo, sans-serif;
     font-weight: 400;
+    padding-top: 70px;
 }
 
 .navbar-laravel {
@@ -25,7 +26,7 @@ body {
 }
 
 #login-wrapper {
-    background-color: #55C501;
+    background-color: #ccc;
 
     .col-7 {
         padding-left: 80px;
@@ -139,6 +140,10 @@ body {
         }
     }
 
+    .edit {
+        font-size: 12px;
+    }
+
     .post-page-footer {
         display: flex;
         justify-content: flex-end;
@@ -159,12 +164,18 @@ body {
     font-size: 14px;
 }
 
+.header-menu {
+    font-size: 12px;
+    font-weight: normal;
+    float: right;
+}
+
 .item-page-wrapper {
     background-color: #f8f9fc;
 
     .item-wrapper {
         background-color: white;
-        margin: 3rem 5rem;
+        margin: 40px auto 0;
         padding: 3rem;
 
         .item-header {
@@ -239,7 +250,7 @@ body {
             display: flex;
             align-items: center;
             padding: 20px;
-            border-bottom: solid 3px #F6F6F6;
+            //border-bottom: solid 3px #F6F6F6;
             .article-box-left {
                 height: 40px;
                 width: 40px;

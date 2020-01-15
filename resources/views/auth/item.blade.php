@@ -2,10 +2,33 @@
 
 @section('content')
 
-    <div class="item-page-wrapper">
-        <div class="item-wrapper">
+    <div class="item-page-wrapper row">
+        <div class="item-wrapper col-7">
             <div class="item-header">
-                <div class="date">{{$article->created_at}}</div>
+
+                <!-- フラッシュメッセージ -->
+                @if (session('flash_message'))
+                    <div class="flash_message">
+                        <div class="alert alert-success">
+                            {{ session('flash_message') }}
+                        </div>
+                    </div>
+                @endif
+
+                <div class="date">
+                    {{$article->created_at}}
+                    @if (Auth::check())
+                        @if(Auth::user()->id === $article->user_id)
+                            <a class="edit header-menu"
+                               href="{{ action('Auth\PostsController@edit', $post) }}">[記事編集]</a>
+                            <a class="del header-menu" href="#" data-id="{{ $post->id }}">[記事削除]</a>
+                            <form method="post" action="{{ url('/drafts', $post->id) }}" id="form_{{$post->id}}">
+                                @csrf
+                                {{ method_field('delete') }}
+                            </form>
+                        @endif
+                    @endif
+                </div>
                 <div class="item-title">{{ $article->title}}</div>
                 <div class="item-tags">
 
@@ -45,4 +68,5 @@
             </div>
         </div>
     </div>
+    <script src="/js/main.js"></script>
 @endsection

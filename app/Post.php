@@ -18,21 +18,33 @@ class Post extends Model
         'body'
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function comments()
     {
         return $this->hasMany('App\Comment');
     }
 
+    /**
+     * リレーション（多対１）
+     */
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function likes()
     {
         return $this->hasMany('App\Like');
     }
 
+    /**
+     * @return mixed
+     */
     public function like_by()
     {
         return Like::where('user_id', Auth::user()->id)->first();

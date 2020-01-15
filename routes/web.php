@@ -15,14 +15,18 @@ Route::get('/', 'Auth\PostsController@showTopPage')->name('top');
 
 Auth::routes();
 
+//Route::get('/login','Auth\AuthenticatesUsers@showLoginForm')->name('login');
+
 Route::get('/drafts/new', 'Auth\PostsController@index')->name('drafts.new');
 Route::post('/drafts/new', 'Auth\PostsController@postArticle')->name('drafts.new.posts');
-
 Route::get('/drafts/{id}', 'Auth\PostsController@showArticle')->name('item');
-
+Route::get('/drafts/{post}/edit', 'Auth\PostsController@edit');
+Route::patch('/drafts/{post}', 'Auth\PostsController@update');
+Route::delete('/drafts/{post}', 'Auth\PostsController@destroy');
 Route::get('/search', 'Auth\PostsController@search')->name('search');
 Route::post('/search', 'Auth\PostsController@searchResult');
 
+// イイネ機能
 Route::post('/posts/{post}/likes', 'LikesController@store');
 Route::post('/posts/{post}/likes/{like}', 'LikesController@destroy');
 
@@ -35,4 +39,4 @@ Route::post('/user/edit-mail', 'Auth\UsersController@updateMail');
 Route::get('/user/edit-password', 'Auth\UsersController@editPassword');
 Route::post('/user/edit-password', 'Auth\UsersController@updatePassword');
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/user', 'Auth\UsersController@store');

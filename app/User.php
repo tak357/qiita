@@ -41,4 +41,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(Like::class);
     }
+
+    /**
+     * リレーション（１対多）
+     */
+    public function Post()
+    {
+        return $this->hasMany('App\Post');
+    }
 }

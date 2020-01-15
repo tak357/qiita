@@ -8,13 +8,13 @@
             <div class="validation">{{ $errors->first('title') }}</div>
         @endif
 
-        <input type="text" name="title" id="title-input" class="form-control m-1" placeholder="タイトル">
+        <input type="text" name="title" id="title-input" class="form-control m-1" placeholder="タイトルを入力">
 
         @if($errors->first('tags'))
             <div class="validation">{{ $errors->first('tags') }}</div>
         @endif
 
-        <input type="text" name="tags" class="form-control m-1" placeholder="プログラム技術に対するタグをスペース区切りで3つまで入力">
+        <input type="text" name="tags" class="form-control m-1" placeholder="半角or全角スペース区切りでタグを入力（3つまで登録可）">
 
         @if($errors->first('body'))
             <div class="validation">{{ $errors->first('article') }}</div>
@@ -23,14 +23,14 @@
         <div class="row">
             <div class="col-6 m-1">
                 <textarea name="article" id="markdown_editor_textarea" cols="30" rows="10"
-                          class="form-control"></textarea>
+                          class="form-control" placeholder="本文を入力"></textarea>
             </div>
             <div class="col-6 m-1">
-                <div id="markdown_preview"></div>
+                <div id="markdown_preview" class="text-muted">プレビュー画面</div>
             </div>
         </div>
         <div class="post-page-footer">
-            <input type="submit" value="Qiitaに投稿" class="post-button m-1">
+            <input type="submit" value="投稿する" class="post-button mt-3 mr-4">
         </div>
     </form>
 

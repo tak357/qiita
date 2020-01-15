@@ -7,6 +7,8 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\ProfileRequest;
+use Illuminate\Support\Facades\Storage;
 
 class UsersController extends Controller
 {
@@ -14,16 +16,31 @@ class UsersController extends Controller
     {
         $auth = Auth::user();
 
-        return view('users.index', ['auth' => $auth]);
+        $is_image = false;
+        if (Storage::disk('local')->exists('public/profile_images/' . Auth::id() . '.jpg')) {
+            $is_image = true;
+        }
+
+//        dd($is_image);
+
+        return view('users.index', ['auth' => $auth, 'is_image' => $is_image]);
     }
 
-//    public function edit($id)
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+
     public function editName()
     {
         $auth = Auth::user();
 
         return view('users.edit', ['auth' => $auth]);
     }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
 
     public function updateName(Request $request)
     {
@@ -44,12 +61,21 @@ class UsersController extends Controller
         return redirect('user')->with('flash_message', '名前を更新しました。');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+
     public function editMail()
     {
         $auth = Auth::user();
 
         return view('users.editmail', ['auth' => $auth]);
     }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
 
     public function updateMail(Request $request)
     {
@@ -72,6 +98,10 @@ class UsersController extends Controller
         return redirect('user')->with('flash_message', 'メールアドレスを更新しました。');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+
     public function editPassword()
     {
         $auth = Auth::user();
@@ -79,27 +109,10 @@ class UsersController extends Controller
         return view('users.editpassword', ['auth' => $auth]);
     }
 
-//    public function updatePassword(Request $request)
-//    {
-//        // 対象レコード取得
-//        $id = Auth::user()->id;
-//        $auth = User::find($id);
-//
-//        // リクエストデータ受け取り
-//        $form = $request->all();
-//
-//        // TODO:バリデーション
-//
-//        // フォームトークン削除
-//        unset($form['_token']);
-//
-//        $form['new-password'] = Hash::make($form['new-password']);
-//
-//        // レコードアップデート
-//        $auth->fill($form)->save();
-//
-//        return redirect('user')->with('flash_message', 'パスワードを更新しました。');
-//    }
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
 
     public function updatePassword(Request $request)
     {
@@ -126,5 +139,15 @@ class UsersController extends Controller
 
         return redirect()->back()->with('change_password_success', 'パスワードを変更しました。');
 
+    }
+
+    public function store(ProfileRequest $request)
+    {
+        $request
+            ->photo
+            ->storeAs('public/profile_images', Auth::id() . '.jpg');
+
+        return redirect('user')
+            ->with('flash_message', 'プロフィール画像を更新しました。');
     }
 }

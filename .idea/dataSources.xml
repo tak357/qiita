@@ -7,5 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1:3306</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="@heorku" uuid="089366f5-90b9-4a13-b551-1bf0e9a400ae">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://us-cdbr-iron-east-05.cleardb.net:3306/heroku_34a7bda1e9434de</jdbc-url>
+    </data-source>
   </component>
 </project>

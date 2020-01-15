@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light pl-5 pr-5 pt-2 pb-2">
-    <a href="/" class="navbar-brand text-white">Qiita風</a>
+<nav class="navbar navbar-expand-lg navbar-light pl-5 pr-5 pt-2 pb-2 fixed-top">
+    <a href="/" class="navbar-brand text-white">Laravel</a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber"
             aria-expanded="false" aria-label="ナビゲーションの切替">
         <span class="navbar-toggler-icon"></span>
@@ -14,44 +14,27 @@
 
         <ul class="navbar-nav ml-auto mr-5">
             @if (Auth::check())
-                {{--TODO:ログインユーザー名を表示する--}}
-                {{--<li class="nav-item ml-2"><div class="nav-link text-white">{{ $users->name }} でログイン中</div></li>--}}
-                <li class="nav-item ml-2"><a href="/drafts/new" id="post-link" class="nav-link text-white">投稿する</a></li>
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link dropdown-toggle text-white" id="navbarDropdown"
-                       role="button" data-toggle="dropdown" aria-haspopup="true"
-                       aria-expanded="false">アイコン</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a href="/user" class="dropdown-item">登録情報</a>
-{{--                        <div class="dropdown-divider"></div>--}}
-{{--                        <a href="#" class="dropdown-item">下書き一覧</a>--}}
-{{--                        <a href="#" class="dropdown-item">編集リクエスト一覧</a>--}}
-{{--                        <div class="dropdown-divider"></div>--}}
-{{--                        <a href="#" class="dropdown-item">設定</a>--}}
-{{--                        <a href="#" class="dropdown-item">ヘルプ</a>--}}
-{{--                        TODO:ユーザー情報削除--}}
-                        <a href="#" class="dropdown-item">サービスを退会する</a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <a href="{{ route('logout') }}" class="dropdown-item"
-                           onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                            ログアウト
-                        </a>
-
-                        <form action="{{ route('logout') }}" method="post" id="logout-form" style="display: none;">
-                            @csrf
-                        </form>
-                    </div>
-                </li>
-            @else
                 <li class="nav-item ml-2">
-                    <a href="/register" class="nav-link text-white" id="register">ユーザー登録</a>
+                    <div class="nav-link text-white">「 {{ Auth::user()->name }} 」でログイン中</div>
                 </li>
-                <li class="nav-item ml-2">
-                    <a href="/login" class="nav-link text-white">ログイン</a>
+                <li class="nav-item ml-4"><a href="/drafts/new" id="post-link" class="nav-link text-white">投稿する</a></li>
+                <li class="nav-item ml-4"><a href="/user" id="" class="nav-link text-white">登録情報</a></li>
+                <li class="nav-item ml-4"><a href="{{ route('logout') }}" class="nav-link text-white"
+                                             onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                        ログアウト</a>
                 </li>
-            @endif
-        </ul>
+                <form action="{{ route('logout') }}" method="post" id="logout-form" style="display: none;">
+                    @csrf
+                </form>
     </div>
+    @else
+        <li class="nav-item ml-2">
+            <a href="/register" class="nav-link text-white pl-2" id="register">ユーザー登録</a>
+        </li>
+        <li class="nav-item ml-2">
+            {{--TODO: CSSの高さ調整--}}
+            <a href="/login" class="nav-link text-white pl-2">ログイン</a>
+        </li>
+        @endif
+        </ul>
 </nav>

@@ -8,12 +8,12 @@ $(function() {
     });
 
     $('#markdown_editor_textarea').keyup(function () {
-        var html = marked(getHtml($(this).val()));
+        let html = marked(getHtml($(this).val()));
         $('#markdown_preview').html(html);
     });
 
-    var target = $('.item-body');
-    var html = marked(getHtml(target.html()));
+    let target = $('.item-body');
+    let html = marked(getHtml(target.html()));
     $('.item-body').html(html);
 
 

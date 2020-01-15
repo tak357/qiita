@@ -1,47 +1,23 @@
 @extends('layouts.common')
 
 @section('content')
+
     @if(!Auth::check())
         <div id="login-wrapper" class="row">
             <div class="col-7">
-                <h1 class="text-white"><b>Hello Hackers!</b></h1>
-                <p class="text-white">Qiita風は記事投稿サービスQiitaを模したサービス</p>
+                <h1 class="text-white"><strong>Hello Hackers!</strong></h1>
+                <p class="text-white">言うなればブログサービスやな。</p>
             </div>
             <div class="col-5">
-                <form action="{{ route('login') }}" method="post">
-                    @csrf
-                    <table>
-                        <tr>
-                            <th>メールアドレス</th>
-                            <td>
-                                <input type="email" name="email" id="email"
-                                       class="form-control @error('email') is-invalid @enderror"
-                                       placeholder="test@example.jp"
-                                       size="50" value="{{ old('email') }}" name="email" required>
-                                @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>メールアドレスかパスワードがおかしいぴょん！</strong>
-                                </span>
-                                @enderror
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>パスワード</th>
-                            <td><input type="password" name="password" id="password" class="form-control"
-                                       size="50" name="password" required></td>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <td><input type="submit" value="ログイン" class="form-control"></td>
-                        <tr>
-                            <th></th>
-                            <td>
-                                <a href="/password/reset" class="text-white">パスワードを忘れた時</a>
-                            </td>
-                        </tr>
-                        </tr>
-                    </table>
-                </form>
+                {{--テストユーザーログイン機能--}}
+                @if(!Auth::check())
+                    <form action="{{ route('login') }}" method="POST" class="">
+                        @csrf
+                        <input type="hidden" name="email" value="test@example.jp">
+                        <input type="hidden" name="password" value="testtest">
+                        <button type="submit" class="btn btn-lg btn-success">テストユーザーでログイン</button>
+                    </form>
+                @endif
             </div>
         </div>
     @else
@@ -49,7 +25,7 @@
 
     <div class="top-wrapper">
         <div class="row">
-            <div class="article-wrapper col-md-6">
+            <div class="article-wrapper col-md-7">
 
                 {{--ログイン成功のメッセージ--}}
                 @if (session('status'))
@@ -58,15 +34,36 @@
                         You are logged in!
                     </div>
                 @endif
-                {{--ログイン成功のメッセージ--}}
+
+            <!-- フラッシュメッセージ -->
+                @if (session('flash_message'))
+                    <div class="flash_message">
+                        <div class="alert alert-success">
+                            {{ session('flash_message') }}
+                        </div>
+                    </div>
+                @endif
+
+            <!-- ユーザー登録完了のメッセージ -->
+                @if (session('confirmMessage'))
+                    <div class="alert alert-success">
+                        {{ session('confirmMessage') }}
+                    </div>
+                @endif
 
                 @foreach($articles as $article)
                     <div class="article-box">
-                        <div class="article-box-left"></div>
+                        <a href="/drafts/{{ $article->id }}">
+                            {{--TODO: プロフィール画像がない時の処理--}}
+                            <img src="/storage/profile_images/{{ $article->user_id }}.jpg" alt="" width="45">
+{{--                            <img src="/storage/profile_images/person.jpg" alt="" width="45">--}}
+                        </a>
                         <div class="article-right">
                             <a href="/drafts/{{ $article->id }}" class="article-title">{{ $article->title }}</a>
                             <div class="article-details">
-                                <div class="article-date">{{ $article->created_at }}</div>
+                                <div class="article-date">投稿者：{{ $article->name }}</div>
+                                <div class="article-date">投稿日時：{{ $article->created_at }}</div>
+                                <div class="article-date">イイネ数：{{ $article->likes_count }}</div>
                             </div>
                         </div>
                     </div>
