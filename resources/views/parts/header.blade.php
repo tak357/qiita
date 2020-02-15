@@ -13,28 +13,36 @@
         </form>
 
         <ul class="navbar-nav ml-auto mr-5">
+            <!-- テストユーザーログイン機能 -->
+            @if(!Auth::check())
+                <form action="{{ route('login') }}" method="POST" class="">
+                    @csrf
+                    <input type="hidden" name="email" value="test@example.jp">
+                    <input type="hidden" name="password" value="testtest">
+                    <button type="submit" class="btn btn-lg btn-danger">テストユーザーでログイン</button>
+                </form>
+            @endif
+
             @if (Auth::check())
                 <li class="nav-item ml-2">
                     <div class="nav-link text-white">「 {{ Auth::user()->name }} 」でログイン中</div>
                 </li>
                 <li class="nav-item ml-4"><a href="/drafts/new" id="post-link" class="nav-link text-white">投稿する</a></li>
                 <li class="nav-item ml-4"><a href="/user" id="" class="nav-link text-white">登録情報</a></li>
-                <li class="nav-item ml-4"><a href="{{ route('logout') }}" class="nav-link text-white"
-                                             onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                        ログアウト</a>
+                <li class="nav-item ml-4"><a href="{{ route('logout') }}"
+                                             class="nav-link text-white"
+                                             onclick="event.preventDefault();document.getElementById('logout-form').submit();">ログアウト</a>
                 </li>
                 <form action="{{ route('logout') }}" method="post" id="logout-form" style="display: none;">
                     @csrf
                 </form>
-    </div>
-    @else
-        <li class="nav-item ml-2">
-            <a href="/register" class="nav-link text-white pl-2" id="register">ユーザー登録</a>
-        </li>
-        <li class="nav-item ml-2">
-            {{--TODO: CSSの高さ調整--}}
-            <a href="/login" class="nav-link text-white pl-2">ログイン</a>
-        </li>
-        @endif
+            @else
+                <li class="nav-item ml-2">
+                    <a href="/register" class="nav-link text-white pl-2" id="register">ユーザー登録</a>
+                </li>
+                <li class="nav-item ml-2">
+                    <a href="/login" class="nav-link text-white pl-2">ログイン</a>
+                </li>
+            @endif
         </ul>
 </nav>

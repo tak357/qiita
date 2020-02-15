@@ -16,7 +16,7 @@
                 @endif
 
                 <div class="date">
-                    {{$article->created_at}}
+                    <p>投稿日時：{{$article->created_at}} - 更新日時：{{$article->updated_at}}</p>
                     @if (Auth::check())
                         @if(Auth::user()->id === $article->user_id)
                             <a class="edit header-menu"
@@ -29,6 +29,7 @@
                         @endif
                     @endif
                 </div>
+
                 <div class="item-title">{{ $article->title}}</div>
                 <div class="item-tags">
 

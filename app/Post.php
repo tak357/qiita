@@ -9,13 +9,17 @@ use App\Like;
 class Post extends Model
 {
     protected $fillable = [
+        'user_id',
         'id',
         'user_id',
         'title',
         'tag1',
         'tag2',
         'tag3',
-        'body'
+        'body',
+        'likes_count',
+        'created_at',
+        'updated_at',
     ];
 
     /**
