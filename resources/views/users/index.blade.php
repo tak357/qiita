@@ -52,8 +52,8 @@
                                     </figure>
                                 @else
                                     <figure>
-                                        <img src="/storage/profile_images/person.jpg" alt="NO IMAGE"
-                                             width="50px" , height="50px">
+                                        <img src="/storage/profile_images/no_image.jpg" alt="NO IMAGE"
+                                             width="100px" , height="100px">
                                     </figure>
                                 @endif
                             </td>
@@ -87,7 +87,7 @@
                 </div>
                 <ul>
                     <li class="text-muted">ユーザー名、メールアドレス、パスワードはタップすると変更可能です。</li>
-                    <li class="text-muted">画像ファイルはjpeg,jpg,png,gifで最大2MBまでアップロード可能です。</li>
+                    <li class="text-muted">プロフィール画像は最大2MBまでアップロード可能です。</li>
                 </ul>
             </div>
         </div>
