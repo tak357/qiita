@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Post;
+use Faker\Factory;
 
 class PostsTableSeeder extends Seeder
 {
@@ -58,7 +59,6 @@ $ cd ../
         ]);
 
         // TODO:以下ページネーションの為に記事埋め
-        //
         factory(App\Post::class, 50)->create(); //50個のダミーデータを生成
     }
 }
