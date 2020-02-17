@@ -51,10 +51,7 @@
                                              width="50px" , height="50px">
                                     </figure>
                                 @else
-                                    <figure>
-                                        <img src="/storage/profile_images/no_image.jpg" alt="NO IMAGE"
-                                             width="100px" , height="100px">
-                                    </figure>
+                                    <p>NO IMAGE</p>
                                 @endif
                             </td>
                         <tr>
