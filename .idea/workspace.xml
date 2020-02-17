@@ -2,30 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15b6581b-5b68-443e-aa9a-5691f8751734" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/factories/PostsFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/LikesTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/PostsTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bin/doctrine-dbal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/storage" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/qiita.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/qiita.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_21_054100_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_21_054100_create_posts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_23_094353_create_likes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_23_094353_create_likes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_23_112619_add_columns_to_posts_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/item.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/item.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/parts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/parts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/top.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -287,7 +267,7 @@
       <workItem from="1579576357756" duration="378000" />
       <workItem from="1580746260252" duration="2545000" />
       <workItem from="1580900160349" duration="13000" />
-      <workItem from="1581759405643" duration="8978000" />
+      <workItem from="1581759405643" duration="10718000" />
     </task>
     <servers />
   </component>
