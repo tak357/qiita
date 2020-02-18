@@ -24,14 +24,12 @@ https://qiita-fake.herokuapp.com
 - 記事投稿機能
 - 記事編集機能
 - 記事削除機能
-- 検索機能
+- 全文検索機能
 - ページネーション
 - イイネ機能
 - 画像アップロード機能
 - ソーシャルログイン（予定）
 https://www.webprofessional.jp/easily-add-social-logins-to-your-app-with-socialite/
-- 全文検索（Laravel Scout）（予定）
-
 
 ## 参考ページ
 ### イイネ機能
