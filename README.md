@@ -1,5 +1,5 @@
 ## 概要
-qiitaみたいなサービス
+qiitaみたいな記事投稿サービス
 
 ## 公開URL
 https://qiita-fake.herokuapp.com
@@ -11,11 +11,16 @@ https://qiita-fake.herokuapp.com
     - Laradock
 
 ## 本番環境
-- heroku
+- AWS
+    - EC2
+    - RDS
+    - Route53
+    - VPC
 
 ## 使用している主な技術、ツール
-- PHP 7.3.9 / Laravel 6.9
+- PHP / Laravel
 - MySQL
+- JavaScript JQuery
 - kanazaca/counter-cache https://github.com/kanazaca/counter-cache
 - PhpStorm
 
