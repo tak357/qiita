@@ -20,7 +20,7 @@ https://qiita-fake.herokuapp.com
 ## 使用している主な技術、ツール
 - PHP / Laravel
 - MySQL
-- JavaScript JQuery
+- JavaScript / JQuery
 - kanazaca/counter-cache https://github.com/kanazaca/counter-cache
 - PhpStorm
 
