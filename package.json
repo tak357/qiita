@@ -23,6 +23,6 @@
         "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
-        "marked": "^0.8.0"
+        "marked": "^4.0.10"
     }
 }
